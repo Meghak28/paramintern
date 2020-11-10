@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>PO MUTATION</head>
+<body>
+ <form name="Myform" onsubmit="validate()">
+ <input type="txt" name="str" placeholder="Enter String" required>
+ <input type="submit" value="Validate">
+</form>
+<script>
+    function validate()
+    {
+        let txt=document.Myform.str.value;
+        var patt=/mutation\s\{createPO\(uid:\"[0-9]+\"\}\,txMode:PROTECTED\,isInward:false\)\}/i;
+        document.write(patt.test(txt));
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Login Mutation</title></head>
+    <body>
+        <form name="validation" onsubmit="validate()">
+        <input type="text" name="str" placeholder="Enter text" required>
+        <input type="submit" value="Validate">
+        </form>
+    </body>
+    <script>
+        function validate()
+        {
+            
+            var txt=document.validation.str.value;
+            var patt=/mutation[\s\t]+login\(\$email:[\s\t]+String\!\,\$password:[\s\t]+String!\)[\s\t]?\{[\s\t]+login\(email:[\s\t]?\$email\,[\s\t]?password:[\s\t]?\$password\)\{[a-zA-z0-9!@#$%^&*()_+\/=\-\s,.{}:;]+[\s\t]?\}\}/i;
+            document.write(patt.test(txt));
+        }
+    </script>
+</html>

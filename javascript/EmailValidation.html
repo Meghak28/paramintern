@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head><title>Email validation</title></head>
+<body>
+    <form name="Myform" onsubmit="validate()">
+ <input type="text"  name="email" placeholder="EnterEmail" required=""><br></br>
+ <input type="password" name="password" placeholder="EnterPassword" required="" minlength="8" maxlength="16"><br></br>
+ <input type="submit" value="Submit">
+ </form>
+ <script>
+     function validate()
+     {
+       var promise= new Promise(function(resolve,reject){
+        var Email=document.Myform.email.value;
+         if(checkvalid(Email))
+         {
+            resolve();
+        }
+         else
+         {
+            reject();
+         }
+
+    
+    });
+    promise.then(function(){
+        document.write("valid");
+    }).catch(function(){
+        documnet.write("Invalid");
+    });
+    }
+
+    function checkvalid(str)
+   {
+
+    var pat=/^[a-zA-Z0-9][a-z]*@[a-zA-Z][0-9]*[a-zA-Z]*\.([a-zA-Z]{2,3})$/i;
+     return pat.test(str);
+   }
+ </script>
+</body>
+
+</html>

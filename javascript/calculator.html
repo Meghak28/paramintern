@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>Calculator</head>
+    <body>
+        <form name="Myform" onsubmit="calculate()">
+        <input type="text"  name="var1"placeholder="EnterNumber"><br></br>
+        <input type="text" name="opt" placeholder="EnterOperator"><br></br>
+        <input type="text" name="var2" placeholder="EnterNumber"><br></br>
+        <input type="submit" value="calculate">
+        </form>
+        <script>
+         function calculate()
+         {
+         var a=parseInt(document.Myform.var1.value);  
+         var b=parseInt(document.Myform.var2.value);
+         var c=document.Myform.opt.value;
+         var d;
+          if(c=="+")
+          d=a+b;
+          else if(c=="-")
+          d=a-b;
+          else if(c=="*")
+          d=a*b;
+          else if(c=="/")
+          {
+            if(b==0)
+            d="number cannot be divided by 0";
+            else
+            d=a/b;    
+          }
+          else if(c=="%")
+          {
+            if(b==0)
+            d="number cannot be divided by 0";
+            else
+            d=a%b;
+          }     
+          document.write(d);
+         }
+        </script>
+    </body>
+</html>

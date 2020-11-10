@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head><title>countwords</title></head>
+     <body>
+      <script>
+       var txt="welcome to Param networks.param is happy to see you all."
+        txt=txt.toLowerCase();
+        var original_len=txt.length;
+        txt=txt.replaceAll("param","");
+        var currlen=txt.length;
+        document.write("the count of word param is "+((original_len-currlen)/5));
+      </script>
+     </body>
+</html>

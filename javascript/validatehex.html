@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Validate Hexadecimal Number</title></head>
+    <body>
+        <form name="validation" onsubmit="validatenum()">
+        <input type="text" name="hexnum" placeholder="Enter Hexadecimal Number" required>
+        <input type="submit" value="Validate">
+        </form>
+    </body>
+    <script>
+        function validatenum()
+        {
+            
+            var txt=document.validation.hexnum.value;
+            var patt=/(^[0xa-fA-F0-9]{32})$/i;
+            document.write(patt.test(txt));
+        }
+    </script>
+</html>
